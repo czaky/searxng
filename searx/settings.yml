@@ -160,7 +160,7 @@ ui:
 #
 outgoing:
   # default timeout in seconds, can be override by engine
-  request_timeout: 3.0
+  request_timeout: 5.0
   # the maximum timeout in seconds
   # max_request_timeout: 10.0
   # suffix of searx_useragent, could contain information like an email address
@@ -183,10 +183,20 @@ outgoing:
   # SOCKS proxies are also supported. See:
   #   https://2.python-requests.org/en/latest/user/advanced/#socks
   #
-  #  proxies:
-  #    all://:
-  #      - http://proxy1:8080
-  #      - http://proxy2:8080
+  proxies:
+    all://:
+      - socks5h://192.168.0.101:9050
+      - socks5h://192.168.0.101:9150
+      - socks5h://192.168.0.101:9250
+      - socks5h://192.168.0.101:9350
+      - socks5h://192.168.0.101:9450
+      - socks5h://192.168.0.101:9550
+      - socks5h://192.168.0.101:9650
+      - socks5h://192.168.0.101:9750
+      - socks5h://192.168.0.101:9850
+      - socks5h://192.168.0.101:9950
+  proxy_request_redundancy: 8
+  retries: 2
   #
   #  using_tor_proxy: true
   #
@@ -651,6 +661,7 @@ engines:
   - name: duckduckgo
     engine: duckduckgo
     shortcut: ddg
+    retry_on_http_error: True
 
   - name: duckduckgo images
     engine: duckduckgo_extra
@@ -658,6 +669,7 @@ engines:
     ddg_category: images
     shortcut: ddi
     disabled: true
+    retry_on_http_error: True
 
   - name: duckduckgo videos
     engine: duckduckgo_extra
@@ -665,6 +677,7 @@ engines:
     ddg_category: videos
     shortcut: ddv
     disabled: true
+    retry_on_http_error: True
 
   - name: duckduckgo news
     engine: duckduckgo_extra
@@ -672,11 +685,13 @@ engines:
     ddg_category: news
     shortcut: ddn
     disabled: true
+    retry_on_http_error: True
 
   - name: duckduckgo weather
     engine: duckduckgo_weather
     shortcut: ddw
     disabled: true
+    retry_on_http_error: True
 
   - name: apple maps
     engine: apple_maps
@@ -828,12 +843,14 @@ engines:
   - name: google
     engine: google
     shortcut: go
+    retry_on_http_error: True
     # additional_tests:
     #   android: *test_android
 
   - name: google images
     engine: google_images
     shortcut: goi
+    retry_on_http_error: True
     # additional_tests:
     #   android: *test_android
     #   dali:
@@ -846,18 +863,21 @@ engines:
   - name: google news
     engine: google_news
     shortcut: gon
+    retry_on_http_error: True
     # additional_tests:
     #   android: *test_android
 
   - name: google videos
     engine: google_videos
     shortcut: gov
+    retry_on_http_error: True
     # additional_tests:
     #   android: *test_android
 
   - name: google scholar
     engine: google_scholar
     shortcut: gos
+    retry_on_http_error: True
 
   - name: google play apps
     engine: google_play
@@ -865,6 +885,7 @@ engines:
     shortcut: gpa
     play_categ: apps
     disabled: true
+    retry_on_http_error: True
 
   - name: google play movies
     engine: google_play
@@ -872,6 +893,7 @@ engines:
     shortcut: gpm
     play_categ: movies
     disabled: true
+    retry_on_http_error: True
 
   - name: material icons
     engine: material_icons
@@ -1454,10 +1476,12 @@ engines:
     engine: pypi
 
   - name: qwant
+    disable: True
     qwant_categ: web
     engine: qwant
     shortcut: qw
     categories: [general, web]
+    retry_on_http_error: True
     additional_tests:
       rosebud: *test_rosebud
 
@@ -1467,6 +1491,7 @@ engines:
     shortcut: qwn
     categories: news
     network: qwant
+    retry_on_http_error: True
 
   - name: qwant images
     qwant_categ: images
@@ -1474,6 +1499,7 @@ engines:
     shortcut: qwi
     categories: [images, web]
     network: qwant
+    retry_on_http_error: True
 
   - name: qwant videos
     qwant_categ: videos
@@ -1481,6 +1507,7 @@ engines:
     shortcut: qwv
     categories: [videos, web]
     network: qwant
+    retry_on_http_error: True
 
   # - name: library
   #   engine: recoll
