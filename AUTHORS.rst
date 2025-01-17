@@ -173,3 +173,5 @@ features or generally made searx better:
 - Austin Olacsi `<https://github.com/Austin-Olacsi>`
 - @micsthepick
 - Daniel Kukula `<https://github.com/dkuku>`
+- Patrick Evans `https://github.com/holysoles`
+- Daniel Mowitz `<https://daniel.mowitz.rocks>`

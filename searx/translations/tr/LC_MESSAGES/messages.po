@@ -16,16 +16,23 @@
 # plawlost <ceo@plawlabs.org>, 2023.
 # Oğuz Ersen <oguz@ersen.moe>, 2024.
 # ggnoredo <mail@fahriuzun.com>, 2024.
-# return42 <return42@users.noreply.translate.codeberg.org>, 2024.
-# Oğuz Ersen <ersen@users.noreply.translate.codeberg.org>, 2024.
+# return42 <return42@users.noreply.translate.codeberg.org>, 2024, 2025.
+# Oğuz Ersen <ersen@users.noreply.translate.codeberg.org>, 2024, 2025.
 # Quitaxd <Quitaxd@users.noreply.translate.codeberg.org>, 2024.
+# sygmamess <sygmamess@users.noreply.translate.codeberg.org>, 2024, 2025.
+# ahmetax <ahmetax@users.noreply.translate.codeberg.org>, 2024, 2025.
+# ulsaa <ulsaa@users.noreply.translate.codeberg.org>, 2024, 2025.
+# Anonymous <anonymous@users.noreply.translate.codeberg.org>, 2025.
+# ggnoredo <ggnoredo@users.noreply.translate.codeberg.org>, 2025.
+# plawlost <plawlost@users.noreply.translate.codeberg.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version:  searx\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-09 15:27+0000\n"
-"PO-Revision-Date: 2024-04-27 16:30+0000\n"
-"Last-Translator: Quitaxd <Quitaxd@users.noreply.translate.codeberg.org>\n"
+"POT-Creation-Date: 2025-01-06 16:16+0000\n"
+"PO-Revision-Date: 2025-01-06 15:53+0000\n"
+"Last-Translator: plawlost <plawlost@users.noreply.translate.codeberg.org>"
+"\n"
 "Language: tr\n"
 "Language-Team: Turkish "
 "<https://translate.codeberg.org/projects/searxng/searxng/tr/>\n"
@@ -33,7 +40,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #. CONSTANT_NAMES['NO_SUBGROUPING']
 #: searx/searxng.msg
@@ -82,7 +89,6 @@ msgstr "radyo"
 
 #. CATEGORY_NAMES['TV']
 #: searx/searxng.msg
-#, fuzzy
 msgid "tv"
 msgstr "televizyon"
 
@@ -171,6 +177,11 @@ msgstr "aydınlık"
 msgid "dark"
 msgstr "karanlık"
 
+#. STYLE_NAMES['BLACK']
+#: searx/searxng.msg
+msgid "black"
+msgstr "siyah"
+
 #. BRAND_CUSTOM_LINKS['UPTIME']
 #: searx/searxng.msg
 msgid "Uptime"
@@ -182,24 +193,26 @@ msgid "About"
 msgstr "Hakkında"
 
 #. WEATHER_TERMS['AVERAGE TEMP.']
-#: searx/searxng.msg
+#: searx/engines/wttr.py:32 searx/searxng.msg
 msgid "Average temp."
-msgstr ""
+msgstr "Ortalama sıcaklık."
 
 #. WEATHER_TERMS['CLOUD COVER']
-#: searx/searxng.msg
+#: searx/engines/open_meteo.py:91 searx/searxng.msg
 msgid "Cloud cover"
-msgstr ""
+msgstr "Bulut örtüsü"
 
 #. WEATHER_TERMS['CONDITION']
+#: searx/engines/duckduckgo_weather.py:45 searx/engines/wttr.py:51
 #: searx/searxng.msg
 msgid "Condition"
-msgstr ""
+msgstr "Durum"
 
 #. WEATHER_TERMS['CURRENT CONDITION']
+#: searx/engines/duckduckgo_weather.py:118 searx/engines/wttr.py:104
 #: searx/searxng.msg
 msgid "Current condition"
-msgstr ""
+msgstr "Şimdiki durum"
 
 #. WEATHER_TERMS['EVENING']
 #: searx/engines/wttr.py:100 searx/searxng.msg
@@ -207,24 +220,28 @@ msgid "Evening"
 msgstr "Akşam"
 
 #. WEATHER_TERMS['FEELS LIKE']
-#: searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:53 searx/engines/open_meteo.py:81
+#: searx/engines/wttr.py:59 searx/searxng.msg
 msgid "Feels like"
-msgstr ""
+msgstr "hissettiren"
 
 #. WEATHER_TERMS['HUMIDITY']
-#: searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:64 searx/engines/open_meteo.py:93
+#: searx/engines/wttr.py:68 searx/searxng.msg
 msgid "Humidity"
-msgstr ""
+msgstr "Rutubet"
 
 #. WEATHER_TERMS['MAX TEMP.']
+#: searx/engines/duckduckgo_weather.py:77 searx/engines/wttr.py:34
 #: searx/searxng.msg
 msgid "Max temp."
-msgstr ""
+msgstr "Max Sıcaklık.."
 
 #. WEATHER_TERMS['MIN TEMP.']
+#: searx/engines/duckduckgo_weather.py:73 searx/engines/wttr.py:33
 #: searx/searxng.msg
 msgid "Min temp."
-msgstr ""
+msgstr "Min Sıcaklık"
 
 #. WEATHER_TERMS['MORNING']
 #: searx/engines/wttr.py:100 searx/searxng.msg
@@ -242,107 +259,129 @@ msgid "Noon"
 msgstr "Öğlen"
 
 #. WEATHER_TERMS['PRESSURE']
-#: searx/searxng.msg
+#: searx/engines/open_meteo.py:95 searx/searxng.msg
 msgid "Pressure"
-msgstr ""
+msgstr "Basınç"
 
 #. WEATHER_TERMS['SUNRISE']
+#: searx/engines/duckduckgo_weather.py:81 searx/engines/wttr.py:36
 #: searx/searxng.msg
 msgid "Sunrise"
-msgstr ""
+msgstr "gündoğumu"
 
 #. WEATHER_TERMS['SUNSET']
+#: searx/engines/duckduckgo_weather.py:82 searx/engines/wttr.py:37
 #: searx/searxng.msg
 msgid "Sunset"
-msgstr ""
+msgstr "Gün batımı"
 
 #. WEATHER_TERMS['TEMPERATURE']
-#: searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:48 searx/engines/open_meteo.py:76
+#: searx/engines/wttr.py:55 searx/searxng.msg
 msgid "Temperature"
-msgstr ""
+msgstr "Sıcaklık"
 
 #. WEATHER_TERMS['UV INDEX']
+#: searx/engines/duckduckgo_weather.py:80 searx/engines/wttr.py:35
 #: searx/searxng.msg
 msgid "UV index"
-msgstr ""
+msgstr "UV Endeksi"
 
 #. WEATHER_TERMS['VISIBILITY']
+#: searx/engines/duckduckgo_weather.py:62 searx/engines/wttr.py:66
 #: searx/searxng.msg
 msgid "Visibility"
-msgstr ""
+msgstr "Görünürlük"
 
 #. WEATHER_TERMS['WIND']
-#: searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:58 searx/engines/open_meteo.py:86
+#: searx/engines/wttr.py:62 searx/searxng.msg
 msgid "Wind"
-msgstr ""
+msgstr "Rüzgâr"
 
 #. SOCIAL_MEDIA_TERMS['SUBSCRIBERS']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:85 searx/searxng.msg
 msgid "subscribers"
-msgstr ""
+msgstr "aboneler"
 
 #. SOCIAL_MEDIA_TERMS['POSTS']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:86 searx/searxng.msg
 msgid "posts"
-msgstr ""
+msgstr "gönderiler"
 
 #. SOCIAL_MEDIA_TERMS['ACTIVE USERS']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:87 searx/searxng.msg
 msgid "active users"
-msgstr ""
+msgstr "aktif kullanıcılar"
 
 #. SOCIAL_MEDIA_TERMS['COMMENTS']
-#: searx/searxng.msg
+#: searx/engines/discourse.py:157 searx/engines/hackernews.py:82
+#: searx/engines/lemmy.py:130 searx/searxng.msg
 msgid "comments"
-msgstr ""
+msgstr "yorumlar"
 
 #. SOCIAL_MEDIA_TERMS['USER']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:129 searx/engines/lemmy.py:164 searx/searxng.msg
 msgid "user"
-msgstr ""
+msgstr "kullanıcı"
 
 #. SOCIAL_MEDIA_TERMS['COMMUNITY']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:131 searx/engines/lemmy.py:165 searx/searxng.msg
 msgid "community"
-msgstr ""
+msgstr "topluluk"
 
 #. SOCIAL_MEDIA_TERMS['POINTS']
-#: searx/searxng.msg
+#: searx/engines/hackernews.py:82 searx/searxng.msg
 msgid "points"
-msgstr ""
+msgstr "puanlar"
 
 #. SOCIAL_MEDIA_TERMS['TITLE']
 #: searx/searxng.msg
 msgid "title"
-msgstr ""
+msgstr "başlık"
 
 #. SOCIAL_MEDIA_TERMS['AUTHOR']
-#: searx/searxng.msg
+#: searx/engines/hackernews.py:85 searx/searxng.msg
 msgid "author"
-msgstr ""
+msgstr "yazar"
 
-#: searx/webapp.py:330
+#. SOCIAL_MEDIA_TERMS['THREAD OPEN']
+#: searx/engines/discourse.py:149 searx/searxng.msg
+msgid "open"
+msgstr "açık"
+
+#. SOCIAL_MEDIA_TERMS['THREAD CLOSED']
+#: searx/engines/discourse.py:149 searx/searxng.msg
+msgid "closed"
+msgstr "kapalı"
+
+#. SOCIAL_MEDIA_TERMS['THREAD ANSWERED']
+#: searx/engines/discourse.py:160 searx/searxng.msg
+msgid "answered"
+msgstr "yanıtlandı"
+
+#: searx/webapp.py:323
 msgid "No item found"
 msgstr "Öğe bulunamadı"
 
-#: searx/engines/qwant.py:281
-#: searx/templates/simple/result_templates/images.html:23 searx/webapp.py:332
+#: searx/engines/qwant.py:288
+#: searx/templates/simple/result_templates/images.html:23 searx/webapp.py:325
 msgid "Source"
 msgstr "Kaynak"
 
-#: searx/webapp.py:334
+#: searx/webapp.py:327
 msgid "Error loading the next page"
 msgstr "Sonraki sayfa yüklenemedi"
 
-#: searx/webapp.py:491 searx/webapp.py:887
+#: searx/webapp.py:492 searx/webapp.py:900
 msgid "Invalid settings, please edit your preferences"
 msgstr "Geçersiz ayarlar, lütfen tercihlerinizi düzenleyin"
 
-#: searx/webapp.py:507
+#: searx/webapp.py:508
 msgid "Invalid settings"
 msgstr "Geçersiz ayarlar"
 
-#: searx/webapp.py:584 searx/webapp.py:666
+#: searx/webapp.py:585 searx/webapp.py:675
 msgid "search error"
 msgstr "arama hatası"
 
@@ -410,21 +449,25 @@ msgstr "{minutes} dakika önce"
 msgid "{hours} hour(s), {minutes} minute(s) ago"
 msgstr "{hours} saat, {minutes} dakika önce"
 
-#: searx/answerers/random/answerer.py:75
+#: searx/answerers/random/answerer.py:76
 msgid "Random value generator"
 msgstr "Rastgele değer üreteci"
 
-#: searx/answerers/random/answerer.py:76
+#: searx/answerers/random/answerer.py:77
 msgid "Generate different random values"
 msgstr "Farklı rastgele değerler üret"
 
-#: searx/answerers/statistics/answerer.py:48
+#: searx/answerers/statistics/answerer.py:50
 msgid "Statistics functions"
 msgstr "İstatistik fonksiyonları"
 
-#: searx/answerers/statistics/answerer.py:49
+#: searx/answerers/statistics/answerer.py:51
 msgid "Compute {functions} of the arguments"
 msgstr "Bağımsız değişkenlerin {functions} değerini hesapla"
+
+#: searx/engines/mozhi.py:57
+msgid "Synonyms"
+msgstr "Eş Anlamlılar"
 
 #: searx/engines/openstreetmap.py:159
 msgid "Get directions"
@@ -438,7 +481,7 @@ msgstr "{title} (ESKİ)"
 msgid "This entry has been superseded by"
 msgstr "Bu girişin yerini alan"
 
-#: searx/engines/qwant.py:283
+#: searx/engines/qwant.py:290
 msgid "Channel"
 msgstr "Kanal"
 
@@ -455,7 +498,7 @@ msgid "clicks"
 msgstr "tıklamalar"
 
 #: searx/engines/seekr.py:193 searx/engines/yummly.py:71
-#: searx/engines/zlibrary.py:128
+#: searx/engines/zlibrary.py:137
 msgid "Language"
 msgstr "Dil"
 
@@ -467,7 +510,7 @@ msgstr ""
 "{firstCitationVelocityYear} yılından {lastCitationVelocityYear} yılına "
 "kadar {numCitations} alıntı(lar)"
 
-#: searx/engines/tineye.py:39
+#: searx/engines/tineye.py:45
 msgid ""
 "Could not read that image url. This may be due to an unsupported file "
 "format. TinEye only supports images that are JPEG, PNG, GIF, BMP, TIFF or"
@@ -477,7 +520,7 @@ msgstr ""
 "yüzünden olabilir. TinEye sadece JPEG, PNG, GIF, BMP, TIFF veya WebP "
 "uzantılı görselleri destekliyor."
 
-#: searx/engines/tineye.py:45
+#: searx/engines/tineye.py:51
 msgid ""
 "The image is too simple to find matches. TinEye requires a basic level of"
 " visual detail to successfully identify matches."
@@ -485,21 +528,21 @@ msgstr ""
 "Fotoğraf aranmak için fazla basit. TinEye 'ın başarılı şekilde çalışması "
 "için basit detaylar gereklidir."
 
-#: searx/engines/tineye.py:51
+#: searx/engines/tineye.py:57
 msgid "The image could not be downloaded."
 msgstr "Görsel indirilemedi."
 
-#: searx/engines/zlibrary.py:129
+#: searx/engines/zlibrary.py:138
 msgid "Book rating"
 msgstr "Kitap değerlendirmesi"
 
-#: searx/engines/zlibrary.py:130
+#: searx/engines/zlibrary.py:139
 msgid "File quality"
 msgstr "Dosya kalitesi"
 
-#: searx/plugins/calculator.py:12
+#: searx/plugins/calculator.py:18
 msgid "Calculate mathematical expressions via the search bar"
-msgstr ""
+msgstr "Arama çubuğunu kullanarak matematiksel ifadeleri hesaplayın"
 
 #: searx/plugins/hash_plugin.py:10
 msgid "Converts strings to different hash digests."
@@ -509,15 +552,13 @@ msgstr "Dizileri farklı özdeğerlerine çevirir."
 msgid "hash digest"
 msgstr "özdeğer"
 
-#: searx/plugins/hostname_replace.py:12
-msgid "Hostname replace"
-msgstr "Sunucu adını değiştir"
+#: searx/plugins/hostnames.py:103
+msgid "Hostnames plugin"
+msgstr "Sunucu adı eklentisi"
 
-#: searx/plugins/hostname_replace.py:13
-msgid "Rewrite result hostnames or remove results based on the hostname"
-msgstr ""
-"Sonuçların sunucu adlarını tekrar yaz ya da sunucu adına göre sonuçları "
-"sil"
+#: searx/plugins/hostnames.py:104
+msgid "Rewrite hostnames, remove results or prioritize them based on the hostname"
+msgstr "Sunucu adını tekrar yaz, sonuçları sil veya sunucu adına göre öncelik ver"
 
 #: searx/plugins/oa_doi_rewrite.py:12
 msgid "Open Access DOI rewrite"
@@ -542,6 +583,14 @@ msgid ""
 msgstr ""
 "Sorgu \"ip\" ise IP'nizi ve sorgu \"kullanıcı tanıtıcısı\" içeriyorsa "
 "kullanıcı tanıtıcınızı görüntüler."
+
+#: searx/plugins/self_info.py:28
+msgid "Your IP is: "
+msgstr "IP adresiniz: "
+
+#: searx/plugins/self_info.py:31
+msgid "Your user-agent is: "
+msgstr "Kullanıcı-ajanınız: "
 
 #: searx/plugins/tor_check.py:24
 msgid "Tor check plugin"
@@ -586,7 +635,7 @@ msgstr "Takip parametrelerini URL'den kaldır"
 
 #: searx/plugins/unit_converter.py:29
 msgid "Convert between units"
-msgstr ""
+msgstr "Birimler arasında dönüştürme"
 
 #: searx/templates/simple/404.html:4
 msgid "Page not found"
@@ -647,27 +696,31 @@ msgstr "Sunucu sahibi ile iletişime geçin"
 msgid "Click on the magnifier to perform search"
 msgstr "Arama yapmak için büyütece tıklayın"
 
-#: searx/templates/simple/macros.html:36
+#: searx/templates/simple/macros.html:40
 msgid "Length"
 msgstr "Uzunluk"
 
-#: searx/templates/simple/macros.html:37
+#: searx/templates/simple/macros.html:41
+msgid "Views"
+msgstr "Görüntülemeler"
+
+#: searx/templates/simple/macros.html:42
 #: searx/templates/simple/result_templates/files.html:34
 #: searx/templates/simple/result_templates/images.html:19
 #: searx/templates/simple/result_templates/paper.html:6
 msgid "Author"
 msgstr "Hazırlayan"
 
-#: searx/templates/simple/macros.html:45
+#: searx/templates/simple/macros.html:50
 msgid "cached"
 msgstr "önbellek"
 
-#: searx/templates/simple/macros.html:45
+#: searx/templates/simple/macros.html:50
 msgid "proxied"
 msgstr "proxylendi"
 
 #: searx/templates/simple/new_issue.html:64
-msgid "Start submiting a new issue on GitHub"
+msgid "Start submitting a new issue on GitHub"
 msgstr "GitHub'a Yeni bir hata göndeymeye başlayin"
 
 #: searx/templates/simple/new_issue.html:66
@@ -694,7 +747,7 @@ msgstr "Yukarıdaki bilgilerle Github'da bir sorun bildirin"
 msgid "No HTTPS"
 msgstr "HTTPS Yok"
 
-#: searx/templates/simple/elements/engines_msg.html:18
+#: searx/templates/simple/elements/engines_msg.html:14
 #: searx/templates/simple/preferences.html:69
 #: searx/templates/simple/preferences.html:70
 msgid "View error logs and submit a bug report"
@@ -739,27 +792,27 @@ msgstr "Genel"
 msgid "Default categories"
 msgstr "Varsayılan kategoriler"
 
-#: searx/templates/simple/preferences.html:187
+#: searx/templates/simple/preferences.html:190
 msgid "User interface"
 msgstr "Kullanıcı arayüzü"
 
-#: searx/templates/simple/preferences.html:208
+#: searx/templates/simple/preferences.html:212
 msgid "Privacy"
 msgstr "Gizlilik"
 
-#: searx/templates/simple/preferences.html:221
+#: searx/templates/simple/preferences.html:225
 msgid "Engines"
 msgstr "Motorlar"
 
-#: searx/templates/simple/preferences.html:223
+#: searx/templates/simple/preferences.html:227
 msgid "Currently used search engines"
 msgstr "Şu anda kullanılan arama motorları"
 
-#: searx/templates/simple/preferences.html:231
+#: searx/templates/simple/preferences.html:235
 msgid "Special Queries"
 msgstr "Özel Arama Sorguları"
 
-#: searx/templates/simple/preferences.html:237
+#: searx/templates/simple/preferences.html:241
 msgid "Cookies"
 msgstr "Tanımlama Bilgileri"
 
@@ -775,19 +828,19 @@ msgstr "Sonuç sayısı"
 msgid "Info"
 msgstr "Bilgi"
 
-#: searx/templates/simple/results.html:77
+#: searx/templates/simple/results.html:75
 msgid "Try searching for:"
 msgstr "Aramaya çalışılan:"
 
-#: searx/templates/simple/results.html:109
+#: searx/templates/simple/results.html:107
 msgid "Back to top"
 msgstr "Yukarıya dön"
 
-#: searx/templates/simple/results.html:127
+#: searx/templates/simple/results.html:125
 msgid "Previous page"
 msgstr "Önceki sayfa"
 
-#: searx/templates/simple/results.html:145
+#: searx/templates/simple/results.html:143
 msgid "Next page"
 msgstr "Sonraki sayfa"
 
@@ -827,6 +880,7 @@ msgstr "Skor"
 msgid "Result count"
 msgstr "Sonuç sayısı"
 
+#: searx/templates/simple/elements/engines_msg.html:7
 #: searx/templates/simple/preferences/engines.html:31
 #: searx/templates/simple/stats.html:28
 msgid "Response time"
@@ -902,17 +956,13 @@ msgstr "Yorum"
 msgid "Download results"
 msgstr "Sonuçlarını indir"
 
-#: searx/templates/simple/elements/engines_msg.html:7
+#: searx/templates/simple/elements/engines_msg.html:4
 msgid "Messages from the search engines"
 msgstr "Arama motorlarından gelen mesajlar"
 
-#: searx/templates/simple/elements/engines_msg.html:12
-msgid "Error!"
-msgstr "Hata!"
-
-#: searx/templates/simple/elements/engines_msg.html:13
-msgid "Engines cannot retrieve results"
-msgstr "Motorlar sonuçları alamıyor"
+#: searx/templates/simple/elements/engines_msg.html:7
+msgid "seconds"
+msgstr "s"
 
 #: searx/templates/simple/elements/search_url.html:3
 msgid "Search URL"
@@ -937,12 +987,12 @@ msgstr "Öneriler"
 msgid "Search language"
 msgstr "Arama dili"
 
-#: searx/templates/simple/filters/languages.html:2
+#: searx/templates/simple/filters/languages.html:4
 #: searx/templates/simple/preferences/language.html:7
 msgid "Default language"
 msgstr "Varsayılan dil"
 
-#: searx/templates/simple/filters/languages.html:4
+#: searx/templates/simple/filters/languages.html:8
 #: searx/templates/simple/preferences/language.html:11
 msgid "Auto-detect"
 msgstr "Özdevimli algılama"
@@ -1160,11 +1210,11 @@ msgstr ""
 
 #: searx/templates/simple/preferences/engines.html:15
 msgid "Enable all"
-msgstr ""
+msgstr "Hepsini etkinleştir"
 
 #: searx/templates/simple/preferences/engines.html:16
 msgid "Disable all"
-msgstr ""
+msgstr "Hepsini hızmet dışı bırak"
 
 #: searx/templates/simple/preferences/engines.html:25
 msgid "!bang"
@@ -1181,6 +1231,14 @@ msgstr "Ağırlık"
 #: searx/templates/simple/preferences/engines.html:33
 msgid "Max time"
 msgstr "En fazla zaman"
+
+#: searx/templates/simple/preferences/favicon.html:2
+msgid "Favicon Resolver"
+msgstr "Favicon Çözümleyicisi"
+
+#: searx/templates/simple/preferences/favicon.html:15
+msgid "Display favicons near search results"
+msgstr "Arama sonuçlarının yanında favsimgelerini göster"
 
 #: searx/templates/simple/preferences/footer.html:2
 msgid ""
@@ -1330,6 +1388,26 @@ msgstr "Arayüz dili"
 msgid "Change the language of the layout"
 msgstr "Düzen dilini değiştirin"
 
+#: searx/templates/simple/preferences/urlformatting.html:2
+msgid "URL formatting"
+msgstr "URL Formatı"
+
+#: searx/templates/simple/preferences/urlformatting.html:8
+msgid "Pretty"
+msgstr ""
+
+#: searx/templates/simple/preferences/urlformatting.html:13
+msgid "Full"
+msgstr ""
+
+#: searx/templates/simple/preferences/urlformatting.html:18
+msgid "Host"
+msgstr ""
+
+#: searx/templates/simple/preferences/urlformatting.html:23
+msgid "Change result URL formatting"
+msgstr ""
+
 #: searx/templates/simple/result_templates/code.html:13
 msgid "repo"
 msgstr "depo"
@@ -1356,36 +1434,11 @@ msgstr "BU site herhangi bir açıklama sağlamadı."
 msgid "Filesize"
 msgstr "Dosya boyutu"
 
-#: searx/templates/simple/result_templates/files.html:39
-#: searx/templates/simple/result_templates/torrent.html:12
-msgid "Bytes"
-msgstr "Bayt"
-
 #: searx/templates/simple/result_templates/files.html:40
-#: searx/templates/simple/result_templates/torrent.html:13
-msgid "kiB"
-msgstr "kiB"
-
-#: searx/templates/simple/result_templates/files.html:41
-#: searx/templates/simple/result_templates/torrent.html:14
-msgid "MiB"
-msgstr "MiB"
-
-#: searx/templates/simple/result_templates/files.html:42
-#: searx/templates/simple/result_templates/torrent.html:15
-msgid "GiB"
-msgstr "GiB"
-
-#: searx/templates/simple/result_templates/files.html:43
-#: searx/templates/simple/result_templates/torrent.html:16
-msgid "TiB"
-msgstr "TiB"
-
-#: searx/templates/simple/result_templates/files.html:47
 msgid "Date"
 msgstr "Gün"
 
-#: searx/templates/simple/result_templates/files.html:49
+#: searx/templates/simple/result_templates/files.html:42
 #: searx/templates/simple/result_templates/paper.html:24
 msgid "Type"
 msgstr "Yaz"
@@ -1503,7 +1556,7 @@ msgstr "Gönderenler"
 msgid "Leecher"
 msgstr "Çekenler"
 
-#: searx/templates/simple/result_templates/torrent.html:20
+#: searx/templates/simple/result_templates/torrent.html:13
 msgid "Number of Files"
 msgstr "Dosya Sayısı"
 
@@ -1931,4 +1984,39 @@ msgstr "görüntüyü gizle"
 #~ "herhangi bir sonuç bulamadık. Lütfen, "
 #~ "başka bir sorgu kullanın veya daha "
 #~ "fazla kategoride arama yapın."
+
+#~ msgid "Rewrite result hostnames or remove results based on the hostname"
+#~ msgstr ""
+#~ "Sonuçların sunucu adlarını tekrar yaz ya"
+#~ " da sunucu adına göre sonuçları sil"
+
+#~ msgid "Bytes"
+#~ msgstr "Bayt"
+
+#~ msgid "kiB"
+#~ msgstr "kiB"
+
+#~ msgid "MiB"
+#~ msgstr "MiB"
+
+#~ msgid "GiB"
+#~ msgstr "GiB"
+
+#~ msgid "TiB"
+#~ msgstr "TiB"
+
+#~ msgid "Hostname replace"
+#~ msgstr "Sunucu adını değiştir"
+
+#~ msgid "Error!"
+#~ msgstr "Hata!"
+
+#~ msgid "Engines cannot retrieve results"
+#~ msgstr "Motorlar sonuçları alamıyor"
+
+#~ msgid "Start submiting a new issue on GitHub"
+#~ msgstr "GitHub'a Yeni bir hata göndeymeye başlayin"
+
+#~ msgid "dummy"
+#~ msgstr ""
 

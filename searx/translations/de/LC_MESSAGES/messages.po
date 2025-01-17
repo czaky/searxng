@@ -20,29 +20,30 @@
 # Markus Heiser <markus.heiser@darmarit.de>, 2022.
 # Peter Martin <weblate@pe7er.com>, 2022.
 # return42 <markus.heiser@darmarit.de>, 2023, 2024.
-# return42 <return42@users.noreply.translate.codeberg.org>, 2024.
+# return42 <return42@users.noreply.translate.codeberg.org>, 2024, 2025.
 # German <German@users.noreply.translate.codeberg.org>, 2024.
+# Anonymous <anonymous@users.noreply.translate.codeberg.org>, 2025.
+# German <german@users.noreply.translate.codeberg.org>, 2025.
 msgid ""
 msgstr ""
-"Project-Id-Version: searx\n"
+"Project-Id-Version:  searx\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-09 15:27+0000\n"
-"PO-Revision-Date: 2024-05-10 06:13+0000\n"
-"Last-Translator: German <German@users.noreply.translate.codeberg.org>\n"
-"Language-Team: German <https://translate.codeberg.org/projects/searxng/"
-"searxng/de/>\n"
+"POT-Creation-Date: 2025-01-06 16:16+0000\n"
+"PO-Revision-Date: 2025-01-06 15:52+0000\n"
+"Last-Translator: German <german@users.noreply.translate.codeberg.org>\n"
 "Language: de\n"
+"Language-Team: German "
+"<https://translate.codeberg.org/projects/searxng/searxng/de/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.2\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #. CONSTANT_NAMES['NO_SUBGROUPING']
 #: searx/searxng.msg
 msgid "without further subgrouping"
-msgstr "keine weitere Untergruppierung"
+msgstr "ohne weitere Untergruppierung"
 
 #. CONSTANT_NAMES['DEFAULT_CATEGORY']
 #: searx/searxng.msg
@@ -97,7 +98,7 @@ msgstr "IT"
 #. CATEGORY_NAMES['NEWS']
 #: searx/searxng.msg
 msgid "news"
-msgstr "Neuigkeiten"
+msgstr "Nachrichten"
 
 #. CATEGORY_NAMES['MAP']
 #: searx/searxng.msg
@@ -107,7 +108,7 @@ msgstr "Karte"
 #. CATEGORY_NAMES['ONIONS']
 #: searx/searxng.msg
 msgid "onions"
-msgstr "Zwiebel"
+msgstr "onions"
 
 #. CATEGORY_NAMES['SCIENCE']
 #: searx/searxng.msg
@@ -174,6 +175,11 @@ msgstr "hell"
 msgid "dark"
 msgstr "dunkel"
 
+#. STYLE_NAMES['BLACK']
+#: searx/searxng.msg
+msgid "black"
+msgstr "black"
+
 #. BRAND_CUSTOM_LINKS['UPTIME']
 #: searx/searxng.msg
 msgid "Uptime"
@@ -185,21 +191,23 @@ msgid "About"
 msgstr "Über"
 
 #. WEATHER_TERMS['AVERAGE TEMP.']
-#: searx/searxng.msg
+#: searx/engines/wttr.py:32 searx/searxng.msg
 msgid "Average temp."
 msgstr "Mittlere Temp."
 
 #. WEATHER_TERMS['CLOUD COVER']
-#: searx/searxng.msg
+#: searx/engines/open_meteo.py:91 searx/searxng.msg
 msgid "Cloud cover"
 msgstr "Bewölkung"
 
 #. WEATHER_TERMS['CONDITION']
+#: searx/engines/duckduckgo_weather.py:45 searx/engines/wttr.py:51
 #: searx/searxng.msg
 msgid "Condition"
 msgstr "Bedingung"
 
 #. WEATHER_TERMS['CURRENT CONDITION']
+#: searx/engines/duckduckgo_weather.py:118 searx/engines/wttr.py:104
 #: searx/searxng.msg
 msgid "Current condition"
 msgstr "Aktuelle Bedingung"
@@ -210,21 +218,25 @@ msgid "Evening"
 msgstr "Abends"
 
 #. WEATHER_TERMS['FEELS LIKE']
-#: searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:53 searx/engines/open_meteo.py:81
+#: searx/engines/wttr.py:59 searx/searxng.msg
 msgid "Feels like"
 msgstr "Gefühlt wie"
 
 #. WEATHER_TERMS['HUMIDITY']
-#: searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:64 searx/engines/open_meteo.py:93
+#: searx/engines/wttr.py:68 searx/searxng.msg
 msgid "Humidity"
 msgstr "Luftfeuchtigkeit"
 
 #. WEATHER_TERMS['MAX TEMP.']
+#: searx/engines/duckduckgo_weather.py:77 searx/engines/wttr.py:34
 #: searx/searxng.msg
 msgid "Max temp."
 msgstr "Max."
 
 #. WEATHER_TERMS['MIN TEMP.']
+#: searx/engines/duckduckgo_weather.py:73 searx/engines/wttr.py:33
 #: searx/searxng.msg
 msgid "Min temp."
 msgstr "Min."
@@ -245,72 +257,79 @@ msgid "Noon"
 msgstr "Mittags"
 
 #. WEATHER_TERMS['PRESSURE']
-#: searx/searxng.msg
+#: searx/engines/open_meteo.py:95 searx/searxng.msg
 msgid "Pressure"
 msgstr "Luftdruck"
 
 #. WEATHER_TERMS['SUNRISE']
+#: searx/engines/duckduckgo_weather.py:81 searx/engines/wttr.py:36
 #: searx/searxng.msg
 msgid "Sunrise"
 msgstr "Sonnenaufgang"
 
 #. WEATHER_TERMS['SUNSET']
+#: searx/engines/duckduckgo_weather.py:82 searx/engines/wttr.py:37
 #: searx/searxng.msg
 msgid "Sunset"
 msgstr "Sonnenuntergang"
 
 #. WEATHER_TERMS['TEMPERATURE']
-#: searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:48 searx/engines/open_meteo.py:76
+#: searx/engines/wttr.py:55 searx/searxng.msg
 msgid "Temperature"
 msgstr "Temperatur"
 
 #. WEATHER_TERMS['UV INDEX']
+#: searx/engines/duckduckgo_weather.py:80 searx/engines/wttr.py:35
 #: searx/searxng.msg
 msgid "UV index"
 msgstr "UV-Index"
 
 #. WEATHER_TERMS['VISIBILITY']
+#: searx/engines/duckduckgo_weather.py:62 searx/engines/wttr.py:66
 #: searx/searxng.msg
 msgid "Visibility"
 msgstr "Sichtweite"
 
 #. WEATHER_TERMS['WIND']
-#: searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:58 searx/engines/open_meteo.py:86
+#: searx/engines/wttr.py:62 searx/searxng.msg
 msgid "Wind"
-msgstr "Sturm"
+msgstr "Wind"
 
 #. SOCIAL_MEDIA_TERMS['SUBSCRIBERS']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:85 searx/searxng.msg
 msgid "subscribers"
 msgstr "Abonnenten"
 
 #. SOCIAL_MEDIA_TERMS['POSTS']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:86 searx/searxng.msg
 msgid "posts"
 msgstr "Beiträge"
 
 #. SOCIAL_MEDIA_TERMS['ACTIVE USERS']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:87 searx/searxng.msg
 msgid "active users"
 msgstr "aktive Nutzer"
 
 #. SOCIAL_MEDIA_TERMS['COMMENTS']
-#: searx/searxng.msg
+#: searx/engines/discourse.py:157 searx/engines/hackernews.py:82
+#: searx/engines/lemmy.py:130 searx/searxng.msg
 msgid "comments"
 msgstr "Kommentare"
 
 #. SOCIAL_MEDIA_TERMS['USER']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:129 searx/engines/lemmy.py:164 searx/searxng.msg
 msgid "user"
 msgstr "Benutzer"
 
 #. SOCIAL_MEDIA_TERMS['COMMUNITY']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:131 searx/engines/lemmy.py:165 searx/searxng.msg
 msgid "community"
 msgstr "Community"
 
 #. SOCIAL_MEDIA_TERMS['POINTS']
-#: searx/searxng.msg
+#: searx/engines/hackernews.py:82 searx/searxng.msg
 msgid "points"
 msgstr "Punkte"
 
@@ -320,38 +339,53 @@ msgid "title"
 msgstr "Titel"
 
 #. SOCIAL_MEDIA_TERMS['AUTHOR']
-#: searx/searxng.msg
+#: searx/engines/hackernews.py:85 searx/searxng.msg
 msgid "author"
 msgstr "Autor/-in"
 
-#: searx/webapp.py:330
+#. SOCIAL_MEDIA_TERMS['THREAD OPEN']
+#: searx/engines/discourse.py:149 searx/searxng.msg
+msgid "open"
+msgstr "offen"
+
+#. SOCIAL_MEDIA_TERMS['THREAD CLOSED']
+#: searx/engines/discourse.py:149 searx/searxng.msg
+msgid "closed"
+msgstr "geschlossen"
+
+#. SOCIAL_MEDIA_TERMS['THREAD ANSWERED']
+#: searx/engines/discourse.py:160 searx/searxng.msg
+msgid "answered"
+msgstr "beantwortet"
+
+#: searx/webapp.py:323
 msgid "No item found"
 msgstr "Keine Einträge gefunden"
 
-#: searx/engines/qwant.py:281
-#: searx/templates/simple/result_templates/images.html:23 searx/webapp.py:332
+#: searx/engines/qwant.py:288
+#: searx/templates/simple/result_templates/images.html:23 searx/webapp.py:325
 msgid "Source"
 msgstr "Quelle"
 
-#: searx/webapp.py:334
+#: searx/webapp.py:327
 msgid "Error loading the next page"
 msgstr "Fehler beim Laden der nächsten Seite"
 
-#: searx/webapp.py:491 searx/webapp.py:887
+#: searx/webapp.py:492 searx/webapp.py:900
 msgid "Invalid settings, please edit your preferences"
 msgstr "Ungültige Einstellungen, bitte Einstellungen ändern"
 
-#: searx/webapp.py:507
+#: searx/webapp.py:508
 msgid "Invalid settings"
 msgstr "Ungültige Einstellungen"
 
-#: searx/webapp.py:584 searx/webapp.py:666
+#: searx/webapp.py:585 searx/webapp.py:675
 msgid "search error"
 msgstr "Suchfehler"
 
 #: searx/webutils.py:36
 msgid "timeout"
-msgstr "Timeout"
+msgstr "Zeitüberschreitung"
 
 #: searx/webutils.py:37
 msgid "parsing error"
@@ -413,21 +447,25 @@ msgstr "vor {minutes} Minute(n)"
 msgid "{hours} hour(s), {minutes} minute(s) ago"
 msgstr "vor {hours} Stunde(n), {minutes} Minute(n)"
 
-#: searx/answerers/random/answerer.py:75
+#: searx/answerers/random/answerer.py:76
 msgid "Random value generator"
 msgstr "Zufallswertgenerator"
 
-#: searx/answerers/random/answerer.py:76
+#: searx/answerers/random/answerer.py:77
 msgid "Generate different random values"
 msgstr "Erzeugt diverse Zufallswerte"
 
-#: searx/answerers/statistics/answerer.py:48
+#: searx/answerers/statistics/answerer.py:50
 msgid "Statistics functions"
 msgstr "Statistikfunktionen"
 
-#: searx/answerers/statistics/answerer.py:49
+#: searx/answerers/statistics/answerer.py:51
 msgid "Compute {functions} of the arguments"
 msgstr "{functions} der Argumente berechnen"
+
+#: searx/engines/mozhi.py:57
+msgid "Synonyms"
+msgstr "Synonyme"
 
 #: searx/engines/openstreetmap.py:159
 msgid "Get directions"
@@ -441,7 +479,7 @@ msgstr "{title} (OBSOLET)"
 msgid "This entry has been superseded by"
 msgstr "Dieser Eintrag wurde überschrieben von"
 
-#: searx/engines/qwant.py:283
+#: searx/engines/qwant.py:290
 msgid "Channel"
 msgstr "Kanal"
 
@@ -458,7 +496,7 @@ msgid "clicks"
 msgstr "Clicks"
 
 #: searx/engines/seekr.py:193 searx/engines/yummly.py:71
-#: searx/engines/zlibrary.py:128
+#: searx/engines/zlibrary.py:137
 msgid "Language"
 msgstr "Sprache"
 
@@ -470,7 +508,7 @@ msgstr ""
 "{numCitations} Zitierungen in den Jahren {firstCitationVelocityYear} bis "
 "{lastCitationVelocityYear}"
 
-#: searx/engines/tineye.py:39
+#: searx/engines/tineye.py:45
 msgid ""
 "Could not read that image url. This may be due to an unsupported file "
 "format. TinEye only supports images that are JPEG, PNG, GIF, BMP, TIFF or"
@@ -480,7 +518,7 @@ msgstr ""
 " unterstütztes Dateiformat zurückzuführen sein. TinEye unterstützt nur "
 "Bilder im Format JPEG, PNG, GIF, BMP, TIFF oder WebP."
 
-#: searx/engines/tineye.py:45
+#: searx/engines/tineye.py:51
 msgid ""
 "The image is too simple to find matches. TinEye requires a basic level of"
 " visual detail to successfully identify matches."
@@ -489,19 +527,19 @@ msgstr ""
 "ein grundlegendes Maß an visuellen Details, um erfolgreich "
 "Übereinstimmungen zu erkennen."
 
-#: searx/engines/tineye.py:51
+#: searx/engines/tineye.py:57
 msgid "The image could not be downloaded."
 msgstr "Das Bild konnte nicht heruntergeladen werden."
 
-#: searx/engines/zlibrary.py:129
+#: searx/engines/zlibrary.py:138
 msgid "Book rating"
 msgstr "Buchbewertung"
 
-#: searx/engines/zlibrary.py:130
+#: searx/engines/zlibrary.py:139
 msgid "File quality"
 msgstr "Dateiqualität"
 
-#: searx/plugins/calculator.py:12
+#: searx/plugins/calculator.py:18
 msgid "Calculate mathematical expressions via the search bar"
 msgstr "Rechne mathematische Ausdrücke mit der Suchleiste aus"
 
@@ -513,15 +551,15 @@ msgstr "Konvertiert Zeichenketten in verschiedene Hashwerte."
 msgid "hash digest"
 msgstr "Hashwert"
 
-#: searx/plugins/hostname_replace.py:12
-msgid "Hostname replace"
-msgstr "Hostnamen ändern"
+#: searx/plugins/hostnames.py:103
+msgid "Hostnames plugin"
+msgstr "Hostnames plugin"
 
-#: searx/plugins/hostname_replace.py:13
-msgid "Rewrite result hostnames or remove results based on the hostname"
+#: searx/plugins/hostnames.py:104
+msgid "Rewrite hostnames, remove results or prioritize them based on the hostname"
 msgstr ""
-"Umschreiben des Hostnamen oder sperren von Hostnamen in den Such-"
-"Ergebnissen"
+"Umschreiben von Hostnamen, Entfernen von Ergebnissen oder Priorisieren "
+"von Ergebnissen auf der Grundlage des Hostnamens"
 
 #: searx/plugins/oa_doi_rewrite.py:12
 msgid "Open Access DOI rewrite"
@@ -546,6 +584,14 @@ msgid ""
 msgstr ""
 "Zeigt deine IP-Adresse an, wenn die Suchabfrage \"ip\" lautet, und deinen"
 " User-Agent, wenn deine Suchabfrage \"user agent\" beinhaltet."
+
+#: searx/plugins/self_info.py:28
+msgid "Your IP is: "
+msgstr "IP: "
+
+#: searx/plugins/self_info.py:31
+msgid "Your user-agent is: "
+msgstr "User-Agent: "
 
 #: searx/plugins/tor_check.py:24
 msgid "Tor check plugin"
@@ -653,27 +699,31 @@ msgstr "Kontakt zum Betreuer der Instanz"
 msgid "Click on the magnifier to perform search"
 msgstr "klicke auf die Lupe, um die Suche zu starten"
 
-#: searx/templates/simple/macros.html:36
+#: searx/templates/simple/macros.html:40
 msgid "Length"
 msgstr "Länge"
 
-#: searx/templates/simple/macros.html:37
+#: searx/templates/simple/macros.html:41
+msgid "Views"
+msgstr "Aufrufe"
+
+#: searx/templates/simple/macros.html:42
 #: searx/templates/simple/result_templates/files.html:34
 #: searx/templates/simple/result_templates/images.html:19
 #: searx/templates/simple/result_templates/paper.html:6
 msgid "Author"
 msgstr "Autor"
 
-#: searx/templates/simple/macros.html:45
+#: searx/templates/simple/macros.html:50
 msgid "cached"
 msgstr "Im Cache"
 
-#: searx/templates/simple/macros.html:45
+#: searx/templates/simple/macros.html:50
 msgid "proxied"
 msgstr "proxy"
 
 #: searx/templates/simple/new_issue.html:64
-msgid "Start submiting a new issue on GitHub"
+msgid "Start submitting a new issue on GitHub"
 msgstr "Fehlerbericht auf GitHub erstellen"
 
 #: searx/templates/simple/new_issue.html:66
@@ -702,7 +752,7 @@ msgstr ""
 msgid "No HTTPS"
 msgstr "Kein HTTPS"
 
-#: searx/templates/simple/elements/engines_msg.html:18
+#: searx/templates/simple/elements/engines_msg.html:14
 #: searx/templates/simple/preferences.html:69
 #: searx/templates/simple/preferences.html:70
 msgid "View error logs and submit a bug report"
@@ -747,27 +797,27 @@ msgstr "Allgemein"
 msgid "Default categories"
 msgstr "Standardkategorien"
 
-#: searx/templates/simple/preferences.html:187
+#: searx/templates/simple/preferences.html:190
 msgid "User interface"
 msgstr "Benutzeroberfläche"
 
-#: searx/templates/simple/preferences.html:208
+#: searx/templates/simple/preferences.html:212
 msgid "Privacy"
 msgstr "Privatsphäre"
 
-#: searx/templates/simple/preferences.html:221
+#: searx/templates/simple/preferences.html:225
 msgid "Engines"
 msgstr "Suchmaschinen"
 
-#: searx/templates/simple/preferences.html:223
+#: searx/templates/simple/preferences.html:227
 msgid "Currently used search engines"
 msgstr "Aktuell benutzte Suchmaschinen"
 
-#: searx/templates/simple/preferences.html:231
+#: searx/templates/simple/preferences.html:235
 msgid "Special Queries"
 msgstr "Besondere Abfragen"
 
-#: searx/templates/simple/preferences.html:237
+#: searx/templates/simple/preferences.html:241
 msgid "Cookies"
 msgstr "Cookies"
 
@@ -783,19 +833,19 @@ msgstr "Trefferanzahl"
 msgid "Info"
 msgstr "Information"
 
-#: searx/templates/simple/results.html:77
+#: searx/templates/simple/results.html:75
 msgid "Try searching for:"
 msgstr "Suche nach:"
 
-#: searx/templates/simple/results.html:109
+#: searx/templates/simple/results.html:107
 msgid "Back to top"
 msgstr "Zurück zum Anfang"
 
-#: searx/templates/simple/results.html:127
+#: searx/templates/simple/results.html:125
 msgid "Previous page"
 msgstr "Vorherige Seite"
 
-#: searx/templates/simple/results.html:145
+#: searx/templates/simple/results.html:143
 msgid "Next page"
 msgstr "Nächste Seite"
 
@@ -835,6 +885,7 @@ msgstr "Punkte"
 msgid "Result count"
 msgstr "Ergebnisanzahl"
 
+#: searx/templates/simple/elements/engines_msg.html:7
 #: searx/templates/simple/preferences/engines.html:31
 #: searx/templates/simple/stats.html:28
 msgid "Response time"
@@ -910,17 +961,13 @@ msgstr "Kommentar(e)"
 msgid "Download results"
 msgstr "Ergebnisse herunterladen"
 
-#: searx/templates/simple/elements/engines_msg.html:7
+#: searx/templates/simple/elements/engines_msg.html:4
 msgid "Messages from the search engines"
 msgstr "Meldungen der Suchmaschinen"
 
-#: searx/templates/simple/elements/engines_msg.html:12
-msgid "Error!"
-msgstr "Fehler!"
-
-#: searx/templates/simple/elements/engines_msg.html:13
-msgid "Engines cannot retrieve results"
-msgstr "Die folgenden Suchmaschinen können die Ergebnisse nicht empfangen"
+#: searx/templates/simple/elements/engines_msg.html:7
+msgid "seconds"
+msgstr "Sek."
 
 #: searx/templates/simple/elements/search_url.html:3
 msgid "Search URL"
@@ -945,12 +992,12 @@ msgstr "Vorschläge"
 msgid "Search language"
 msgstr "Such-Sprache/-Region"
 
-#: searx/templates/simple/filters/languages.html:2
+#: searx/templates/simple/filters/languages.html:4
 #: searx/templates/simple/preferences/language.html:7
 msgid "Default language"
 msgstr "Standardsprache"
 
-#: searx/templates/simple/filters/languages.html:4
+#: searx/templates/simple/filters/languages.html:8
 #: searx/templates/simple/preferences/language.html:11
 msgid "Auto-detect"
 msgstr "Spracherkennung"
@@ -1191,6 +1238,14 @@ msgstr "Gewichtung"
 msgid "Max time"
 msgstr "max. Zeit"
 
+#: searx/templates/simple/preferences/favicon.html:2
+msgid "Favicon Resolver"
+msgstr "Favicon Anbieter"
+
+#: searx/templates/simple/preferences/favicon.html:15
+msgid "Display favicons near search results"
+msgstr "Anzeigen der Favicons neben dem Suchergebnis"
+
 #: searx/templates/simple/preferences/footer.html:2
 msgid ""
 "These settings are stored in your cookies, this allows us not to store "
@@ -1337,6 +1392,26 @@ msgstr "Oberflächensprache"
 msgid "Change the language of the layout"
 msgstr "ändere die Sprache des Layouts"
 
+#: searx/templates/simple/preferences/urlformatting.html:2
+msgid "URL formatting"
+msgstr "URL Anzeige"
+
+#: searx/templates/simple/preferences/urlformatting.html:8
+msgid "Pretty"
+msgstr "Formatiert"
+
+#: searx/templates/simple/preferences/urlformatting.html:13
+msgid "Full"
+msgstr "Vollständig"
+
+#: searx/templates/simple/preferences/urlformatting.html:18
+msgid "Host"
+msgstr "Hostname"
+
+#: searx/templates/simple/preferences/urlformatting.html:23
+msgid "Change result URL formatting"
+msgstr "Ändern der URL Anzeige in den Ergebnissen"
+
 #: searx/templates/simple/result_templates/code.html:13
 msgid "repo"
 msgstr "Repository"
@@ -1363,36 +1438,11 @@ msgstr "Diese Seite besitzt keine Beschreibung."
 msgid "Filesize"
 msgstr "Dateigröße"
 
-#: searx/templates/simple/result_templates/files.html:39
-#: searx/templates/simple/result_templates/torrent.html:12
-msgid "Bytes"
-msgstr "Bytes"
-
 #: searx/templates/simple/result_templates/files.html:40
-#: searx/templates/simple/result_templates/torrent.html:13
-msgid "kiB"
-msgstr "kB"
-
-#: searx/templates/simple/result_templates/files.html:41
-#: searx/templates/simple/result_templates/torrent.html:14
-msgid "MiB"
-msgstr "MB"
-
-#: searx/templates/simple/result_templates/files.html:42
-#: searx/templates/simple/result_templates/torrent.html:15
-msgid "GiB"
-msgstr "GB"
-
-#: searx/templates/simple/result_templates/files.html:43
-#: searx/templates/simple/result_templates/torrent.html:16
-msgid "TiB"
-msgstr "TB"
-
-#: searx/templates/simple/result_templates/files.html:47
 msgid "Date"
 msgstr "Datum"
 
-#: searx/templates/simple/result_templates/files.html:49
+#: searx/templates/simple/result_templates/files.html:42
 #: searx/templates/simple/result_templates/paper.html:24
 msgid "Type"
 msgstr "Medium"
@@ -1510,7 +1560,7 @@ msgstr "Seeder"
 msgid "Leecher"
 msgstr "Leecher"
 
-#: searx/templates/simple/result_templates/torrent.html:20
+#: searx/templates/simple/result_templates/torrent.html:13
 msgid "Number of Files"
 msgstr "Anzahl der Dateien"
 
@@ -1958,3 +2008,39 @@ msgstr "Video verstecken"
 #~ "werden. Bitte nutze einen anderen "
 #~ "Suchbegriff, oder suche das gewünschte "
 #~ "in einer anderen Kategorie."
+
+#~ msgid "Rewrite result hostnames or remove results based on the hostname"
+#~ msgstr ""
+#~ "Umschreiben des Hostnamen oder sperren "
+#~ "von Hostnamen in den Such-Ergebnissen"
+
+#~ msgid "Bytes"
+#~ msgstr "Bytes"
+
+#~ msgid "kiB"
+#~ msgstr "kB"
+
+#~ msgid "MiB"
+#~ msgstr "MB"
+
+#~ msgid "GiB"
+#~ msgstr "GB"
+
+#~ msgid "TiB"
+#~ msgstr "TB"
+
+#~ msgid "Hostname replace"
+#~ msgstr "Hostnamen ändern"
+
+#~ msgid "Error!"
+#~ msgstr "Fehler!"
+
+#~ msgid "Engines cannot retrieve results"
+#~ msgstr "Die folgenden Suchmaschinen können die Ergebnisse nicht empfangen"
+
+#~ msgid "Start submiting a new issue on GitHub"
+#~ msgstr "Fehlerbericht auf GitHub erstellen"
+
+#~ msgid "dummy"
+#~ msgstr ""
+
